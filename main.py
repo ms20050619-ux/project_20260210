@@ -20,7 +20,7 @@ def load_pipeline(path: str):
 MODEL_FILES = {
     "KNN": "knn_pipeline.joblib",
     "LogisticRegression": "logistic_regression_pipeline.joblib",
-    "隨機森林": "randomforest_pipeline.joblib",
+    # "隨機森林": "randomforest_pipeline.joblib",
     "XgBoost": "xgboost_pipeline.joblib",
 }
 
@@ -219,4 +219,5 @@ if st.session_state.sample_idx is not None:
     if prediction == actual_label:
         st.success("🎉 預測正確！該模型成功捕捉到樣本特徵。")
     else:
+
         st.error("❌ 預測失誤。這反映了模型在邊際樣本上的侷限性。")
